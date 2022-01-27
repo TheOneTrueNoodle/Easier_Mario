@@ -14,7 +14,13 @@ public class ChangeInputPrompt : MonoBehaviour
     public GameObject ButtonPrompt;
     public PlayerControls pInput;
 
-    private void update ()
+    public void ShowDisplay ()
     {
+        ButtonPrompt.SetActive(true);
+    }
+
+    public void HideDisplay ()
+    {
+        ButtonPrompt.SetActive(false);
     }
 }

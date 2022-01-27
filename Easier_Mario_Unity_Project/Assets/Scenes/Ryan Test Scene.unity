@@ -6660,6 +6660,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1376814102, guid: e51ef0cdc4745574ea149e4e0a96d0be, type: 3}
   m_PrefabInstance: {fileID: 483029386760842748}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &483029386760842750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483029386760842749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d146ed0bf4b2cb0439b1a464531e16b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &543450652792844719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 89695780480195667, guid: e51ef0cdc4745574ea149e4e0a96d0be, type: 3}

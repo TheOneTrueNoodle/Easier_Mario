@@ -40,6 +40,7 @@ public class ResourceCollection : MonoBehaviour
         {
             Interactable = true;
         }
+        col.GetComponentInChildren<ChangeInputPrompt>().ShowDisplay();
     }
 
     private void OnTriggerExit(Collider col)
@@ -48,6 +49,7 @@ public class ResourceCollection : MonoBehaviour
         {
             Interactable = false;
         }
+        col.GetComponentInChildren<ChangeInputPrompt>().HideDisplay();
     }
 
     private void Collect()
