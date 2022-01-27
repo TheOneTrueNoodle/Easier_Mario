@@ -9,6 +9,9 @@ public class Third_Person_Movement : MonoBehaviour
     public CharacterController controller;
     public Transform cam;
 
+    //Variables for Animations
+    public Animator Anim;
+
     //Variables for movement values
     public float walkspeed = 6f;
     public float gravity = -9.81f;
