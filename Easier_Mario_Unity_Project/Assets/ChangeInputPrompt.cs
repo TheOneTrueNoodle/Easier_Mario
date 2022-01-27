@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class ChangeInputPrompt : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Sprite ProController_A;
+    public Sprite ProController_B;
+    public Sprite PS4Controller_Circle;
+    public Sprite PS4Controller_Cross;
+    public Sprite Keyboard_E;
+    public Sprite Keyboard_Space;
 
-    // Update is called once per frame
-    void Update()
+    public GameObject ButtonPrompt;
+    public PlayerControls pInput;
+
+    private void update ()
     {
-        
     }
 }
