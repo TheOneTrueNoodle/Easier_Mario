@@ -132,8 +132,8 @@ GameObject:
   m_Component:
   - component: {fileID: 89695780480195667}
   - component: {fileID: 753642081170212581}
-  - component: {fileID: 753642081170212580}
   - component: {fileID: 753642081170212587}
+  - component: {fileID: 753642081170212580}
   - component: {fileID: 753642081170212586}
   m_Layer: 0
   m_Name: Player
@@ -204,24 +204,6 @@ MonoBehaviour:
   m_DefaultActionMap: GameplayControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!143 &753642081170212580
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753642081170212585}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 3
-  m_Radius: 1
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!95 &753642081170212587
 Animator:
   serializedVersion: 3
@@ -241,6 +223,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!143 &753642081170212580
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753642081170212585}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 3
+  m_Radius: 1
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!114 &753642081170212586
 MonoBehaviour:
   m_ObjectHideFlags: 0

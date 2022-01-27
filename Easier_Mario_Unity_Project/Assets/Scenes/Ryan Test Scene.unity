@@ -2734,6 +2734,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 753642081170212585, guid: e51ef0cdc4745574ea149e4e0a96d0be, type: 3}
   m_PrefabInstance: {fileID: 483029386760842748}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &825308585 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 753642081170212587, guid: e51ef0cdc4745574ea149e4e0a96d0be, type: 3}
+  m_PrefabInstance: {fileID: 483029386760842748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!136 &825308588
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6513,6 +6518,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 458826097}
+    - target: {fileID: 753642081170212586, guid: e51ef0cdc4745574ea149e4e0a96d0be, type: 3}
+      propertyPath: Anim
+      value: 
+      objectReference: {fileID: 825308585}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e51ef0cdc4745574ea149e4e0a96d0be, type: 3}
 --- !u!4 &543450652792844719 stripped
