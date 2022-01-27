@@ -135,9 +135,10 @@ GameObject:
   - component: {fileID: 753642081170212587}
   - component: {fileID: 753642081170212580}
   - component: {fileID: 753642081170212586}
+  - component: {fileID: 825308588}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,6 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 753642081170212580}
   cam: {fileID: 0}
+  Anim: {fileID: 753642081170212587}
   walkspeed: 6
   gravity: -60
   jumpHeight: 3
@@ -266,6 +268,20 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   isGrounded: 0
   turnSmoothTime: 0.1
+--- !u!136 &825308588
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753642081170212585}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1 &987362351267633095
 GameObject:
   m_ObjectHideFlags: 0
