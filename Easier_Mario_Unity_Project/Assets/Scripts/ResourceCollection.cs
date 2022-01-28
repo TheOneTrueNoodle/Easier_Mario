@@ -12,6 +12,8 @@ public class ResourceCollection : MonoBehaviour
     public int MaxResourceCount;
     public int CurrentResourceCount;
 
+    public Animator PlayerAnim;
+
     private void Awake()
     {
         pInput = new PlayerControls();
@@ -34,6 +36,7 @@ public class ResourceCollection : MonoBehaviour
         CurrentResourceCount = MaxResourceCount;
     }
 
+    //Detect Player Nearby
     private void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Player")
@@ -42,7 +45,6 @@ public class ResourceCollection : MonoBehaviour
         }
         col.GetComponentInChildren<ChangeInputPrompt>().ShowDisplay();
     }
-
     private void OnTriggerExit(Collider col)
     {
         if(col.tag == "Player")
@@ -52,6 +54,7 @@ public class ResourceCollection : MonoBehaviour
         col.GetComponentInChildren<ChangeInputPrompt>().HideDisplay();
     }
 
+    //Trigger Collection
     private void Collect()
     {
         if(Interactable == true)
@@ -64,8 +67,10 @@ public class ResourceCollection : MonoBehaviour
                     {
                         if (InvManager.Resources[i].CurrentResourceValue + 1 != InvManager.Resources[i].MaxResourceValue)
                         {
+                            PlayerAnim.SetTrigger("Interact");
                             InvManager.Resources[i].CurrentResourceValue++;
                             CurrentResourceCount--;
+                            PlayerAnim.ResetTrigger("Interact");
                         }
                     }
                 }

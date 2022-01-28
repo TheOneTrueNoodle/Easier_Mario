@@ -56,6 +56,15 @@ public class Third_Person_Movement : MonoBehaviour
     private void Movement()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if(isGrounded != true)
+        {
+            Anim.SetBool("IsJumping", false);
+            Anim.SetBool("isGrounded", false);
+        }
+        else
+        {
+            Anim.SetBool("isGrounded", true);
+        }
 
         if (isGrounded && velocity.y < 0)
         {
@@ -64,6 +73,15 @@ public class Third_Person_Movement : MonoBehaviour
 
         MoveInput = pInput.GameplayControls.Move.ReadValue<Vector2>();
         Vector3 Direction = new Vector3(MoveInput.x, 0f, MoveInput.y).normalized;
+
+        if (MoveInput.x == 0 && MoveInput.y == 0)
+        {
+            Anim.SetBool("isRunning", false);
+        }
+        else
+        {
+            Anim.SetBool("isRunning", true);
+        }
 
         if (Direction.magnitude >= 0.1f)
         {
@@ -83,6 +101,7 @@ public class Third_Person_Movement : MonoBehaviour
     {
         if (isGrounded == true)
         {
+            Anim.SetBool("IsJumping", true);
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
     }

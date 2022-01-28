@@ -13,6 +13,8 @@ public class ConstructionScript : MonoBehaviour
     private InventoryManager InvManager;
     private PlayerControls pInput;
 
+    public Animator PlayerAnim;
+
     private void Awake()
     {
         pInput = new PlayerControls();
@@ -60,12 +62,14 @@ public class ConstructionScript : MonoBehaviour
             {
                 if(InvManager.Resources[i].ResourceName == NeededResource && InvManager.Resources[i].CurrentResourceValue > 0)
                 {
+                    PlayerAnim.SetTrigger("Interact");
                     CurrentResourceAmount++;
                     InvManager.Resources[i].CurrentResourceValue--;
                     if(CurrentResourceAmount == NeededResourceAmount)
                     {
                         ConstructObject();
                     }
+                    PlayerAnim.ResetTrigger("Interact");
                 }
             }
         }

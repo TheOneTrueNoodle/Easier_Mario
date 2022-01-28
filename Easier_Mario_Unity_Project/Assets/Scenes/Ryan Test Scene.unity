@@ -4510,6 +4510,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1423149483, guid: adf8531ea4cd97f49a364fbc6ef5fe4e, type: 3}
+      propertyPath: PlayerAnim
+      value: 
+      objectReference: {fileID: 2026076301}
     - target: {fileID: 4890621050841403801, guid: adf8531ea4cd97f49a364fbc6ef5fe4e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6222,6 +6226,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5451254724574908632, guid: 8da05daa4e78e4149b39f6046fef928f, type: 3}
+--- !u!95 &2026076301 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 753642081170212587, guid: e51ef0cdc4745574ea149e4e0a96d0be, type: 3}
+  m_PrefabInstance: {fileID: 483029386760842748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2037875701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6721,6 +6730,7 @@ MonoBehaviour:
   HarvestableResource: Wood
   MaxResourceCount: 4
   CurrentResourceCount: 0
+  PlayerAnim: {fileID: 2026076301}
 --- !u!64 &2475871352969562066
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6757,7 +6767,7 @@ Transform:
   m_GameObject: {fileID: 2475871352969562064}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -15.626666, y: 0.9866845, z: 1.8867855}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
