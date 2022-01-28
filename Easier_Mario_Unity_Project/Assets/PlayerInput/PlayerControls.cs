@@ -41,6 +41,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""AccessMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""bc429425-56a8-46a5-b5a6-4c5fdb245045"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -239,6 +247,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""PS4 Dualshock"",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b2289968-272e-44d8-936b-68ff7ff2dff6"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""M+K"",
+                    ""action"": ""AccessMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1114,6 +1133,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_GameplayControls_Move = m_GameplayControls.FindAction("Move", throwIfNotFound: true);
         m_GameplayControls_Jump = m_GameplayControls.FindAction("Jump", throwIfNotFound: true);
         m_GameplayControls_Interact = m_GameplayControls.FindAction("Interact", throwIfNotFound: true);
+        m_GameplayControls_AccessMenu = m_GameplayControls.FindAction("AccessMenu", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1175,6 +1195,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_GameplayControls_Move;
     private readonly InputAction m_GameplayControls_Jump;
     private readonly InputAction m_GameplayControls_Interact;
+    private readonly InputAction m_GameplayControls_AccessMenu;
     public struct GameplayControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -1182,6 +1203,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_GameplayControls_Move;
         public InputAction @Jump => m_Wrapper.m_GameplayControls_Jump;
         public InputAction @Interact => m_Wrapper.m_GameplayControls_Interact;
+        public InputAction @AccessMenu => m_Wrapper.m_GameplayControls_AccessMenu;
         public InputActionMap Get() { return m_Wrapper.m_GameplayControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1200,6 +1222,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Interact.started -= m_Wrapper.m_GameplayControlsActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_GameplayControlsActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_GameplayControlsActionsCallbackInterface.OnInteract;
+                @AccessMenu.started -= m_Wrapper.m_GameplayControlsActionsCallbackInterface.OnAccessMenu;
+                @AccessMenu.performed -= m_Wrapper.m_GameplayControlsActionsCallbackInterface.OnAccessMenu;
+                @AccessMenu.canceled -= m_Wrapper.m_GameplayControlsActionsCallbackInterface.OnAccessMenu;
             }
             m_Wrapper.m_GameplayControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -1213,6 +1238,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @AccessMenu.started += instance.OnAccessMenu;
+                @AccessMenu.performed += instance.OnAccessMenu;
+                @AccessMenu.canceled += instance.OnAccessMenu;
             }
         }
     }
@@ -1330,6 +1358,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnAccessMenu(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
