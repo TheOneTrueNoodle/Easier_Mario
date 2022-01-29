@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 1376814103}
   - component: {fileID: 1376814105}
   - component: {fileID: 1376814104}
+  - component: {fileID: 483029386760842750}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -135,7 +136,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1376814105
 CanvasRenderer:
@@ -165,7 +166,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8161dedd53d77c94c9a3dd3b1d8f5509, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -175,6 +176,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &483029386760842750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376814102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d146ed0bf4b2cb0439b1a464531e16b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1730582005
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +232,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4adb667124a9f964aa9effda83c5a6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ProController_A: {fileID: 21300000, guid: 8161dedd53d77c94c9a3dd3b1d8f5509, type: 3}
+  ProController_B: {fileID: 21300000, guid: c0442476e79ac6246affb95ed515183f, type: 3}
+  PS4Controller_Circle: {fileID: 0}
+  PS4Controller_Cross: {fileID: 0}
+  Keyboard_E: {fileID: 0}
+  Keyboard_Space: {fileID: 0}
+  ButtonPrompt: {fileID: 1376814102}
 --- !u!1 &192344306235100673
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +468,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f6763f39-6efe-427d-ac95-be90395d441f
     m_ActionName: UI/RightClick[/Mouse/rightButton,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bc429425-56a8-46a5-b5a6-4c5fdb245045
+    m_ActionName: GameplayControls/AccessMenu[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: GameplayControls
