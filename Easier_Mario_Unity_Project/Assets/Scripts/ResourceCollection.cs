@@ -97,6 +97,7 @@ public class ResourceCollection : MonoBehaviour
                         {
                             if (InvManager.Resources[i].CurrentResourceValue != InvManager.Resources[i].MaxResourceValue)
                             {
+                                FindObjectOfType<AudioManager>().Play("HittingTree");
                                 PlayerAnim.Play("CharacterArmature|Punch");
                                 InvManager.Resources[i].CurrentResourceValue++;
                                 CurrentResourceCount--;
