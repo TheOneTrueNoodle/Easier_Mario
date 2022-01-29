@@ -13,6 +13,12 @@ public class ResourceCollection : MonoBehaviour
     public int CurrentResourceCount;
 
     public Animator PlayerAnim;
+    public Animator ThisAnim;
+
+    private bool StartGrowing;
+    public float MaxGrowTime;
+    public float MinGrowTime;
+    private float GrowTime;
 
     private void Awake()
     {
@@ -36,14 +42,35 @@ public class ResourceCollection : MonoBehaviour
         CurrentResourceCount = MaxResourceCount;
     }
 
-    //Detect Player Nearby
     private void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Player")
+        if(col.tag == "Player")
+        {
+            col.GetComponentInChildren<ChangeInputPrompt>().ShowDisplay();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if(StartGrowing == true)
+        {
+            GrowTime--;
+            if (GrowTime <= 0)
+            {
+                ThisAnim.Play("TreeGrowAnimation");
+                StartGrowing = false;
+                CurrentResourceCount = MaxResourceCount;
+            }
+        }
+    }
+
+    //Detect Player Nearby
+    private void OnTriggerStay(Collider col)
+    {
+        if (col.tag == "Player" && col.GetComponent<Third_Person_Movement>().isGrounded == true)
         {
             Interactable = true;
         }
-        col.GetComponentInChildren<ChangeInputPrompt>().ShowDisplay();
     }
     private void OnTriggerExit(Collider col)
     {
@@ -57,20 +84,32 @@ public class ResourceCollection : MonoBehaviour
     //Trigger Collection
     private void Collect()
     {
-        if(Interactable == true)
+        if (PlayerAnim.GetCurrentAnimatorStateInfo(0).IsName("CharacterArmature|Punch") != true)
         {
-            if (CurrentResourceCount != 0)
+            if (Interactable == true)
             {
-                for (int i = 0; i < InvManager.Resources.Count; i++)
+                if (CurrentResourceCount != 0)
                 {
-                    if (HarvestableResource == InvManager.Resources[i].ResourceName)
+                    for (int i = 0; i < InvManager.Resources.Count; i++)
                     {
-                        if (InvManager.Resources[i].CurrentResourceValue + 1 != InvManager.Resources[i].MaxResourceValue)
+                        if (HarvestableResource == InvManager.Resources[i].ResourceName)
                         {
-                            PlayerAnim.SetTrigger("Interact");
-                            InvManager.Resources[i].CurrentResourceValue++;
-                            CurrentResourceCount--;
-                            PlayerAnim.ResetTrigger("Interact");
+                            if (InvManager.Resources[i].CurrentResourceValue != InvManager.Resources[i].MaxResourceValue)
+                            {
+                                PlayerAnim.Play("CharacterArmature|Punch");
+                                InvManager.Resources[i].CurrentResourceValue++;
+                                CurrentResourceCount--;
+                                if(CurrentResourceCount > 0)
+                                {
+                                    ThisAnim.Play("TreeInteractAnimation");
+                                }
+                                else if(CurrentResourceCount == 0)
+                                {
+                                    ThisAnim.Play("TreeUsedUpAnimation");
+                                    StartGrowing = true;
+                                    GrowTime = Random.Range(MinGrowTime, MaxGrowTime);
+                                }
+                            }
                         }
                     }
                 }

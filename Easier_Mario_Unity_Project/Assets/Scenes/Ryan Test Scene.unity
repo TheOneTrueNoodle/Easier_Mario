@@ -6708,6 +6708,7 @@ GameObject:
   - component: {fileID: 2475871352969562066}
   - component: {fileID: 2475871352969562067}
   - component: {fileID: 2475871352969562065}
+  - component: {fileID: 2475871352969562068}
   m_Layer: 0
   m_Name: Tree
   m_TagString: ResourceNode
@@ -6731,6 +6732,9 @@ MonoBehaviour:
   MaxResourceCount: 4
   CurrentResourceCount: 0
   PlayerAnim: {fileID: 2026076301}
+  ThisAnim: {fileID: 2475871352969562068}
+  MaxGrowTime: 200
+  MinGrowTime: 150
 --- !u!64 &2475871352969562066
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6758,6 +6762,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &2475871352969562068
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475871352969562064}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a536152c23d083d47adb38bfa0519e66, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &2961080798299643242
 Transform:
   m_ObjectHideFlags: 0
