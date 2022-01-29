@@ -13,7 +13,7 @@ public class ConstructionScript : MonoBehaviour
     private InventoryManager InvManager;
     private PlayerControls pInput;
 
-    public Animator PlayerAnim;
+    private Animator PlayerAnim;
 
     private void Awake()
     {
@@ -34,6 +34,7 @@ public class ConstructionScript : MonoBehaviour
     private void Start()
     {
         InvManager = FindObjectOfType<InventoryManager>().GetComponent<InventoryManager>();
+        PlayerAnim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         CurrentResourceAmount = 0;
     }
     private void OnTriggerEnter(Collider col)

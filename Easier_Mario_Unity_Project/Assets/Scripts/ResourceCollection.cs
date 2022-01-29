@@ -12,7 +12,7 @@ public class ResourceCollection : MonoBehaviour
     public int MaxResourceCount;
     public int CurrentResourceCount;
 
-    public Animator PlayerAnim;
+    private Animator PlayerAnim;
     public Animator ThisAnim;
 
     private bool StartGrowing;
@@ -39,6 +39,7 @@ public class ResourceCollection : MonoBehaviour
     private void Start()
     {
         InvManager = FindObjectOfType<InventoryManager>().GetComponent<InventoryManager>();
+        PlayerAnim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         CurrentResourceCount = MaxResourceCount;
     }
 
