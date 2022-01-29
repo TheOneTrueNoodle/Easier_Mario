@@ -77,12 +77,12 @@ public class Third_Person_Movement : MonoBehaviour
         if (MoveInput.x == 0 && MoveInput.y == 0)
         {
             
-            FindObjectOfType<AudioManager>().Pause("WalkGrass");
+           // FindObjectOfType<AudioManager>().Pause("WalkGrass");
             Anim.SetBool("isRunning", false);
         }
         else
         {
-            FindObjectOfType<AudioManager>().Play("WalkGrass");
+          //  FindObjectOfType<AudioManager>().Play("WalkGrass");
             Anim.SetBool("isRunning", true);
         }
 
