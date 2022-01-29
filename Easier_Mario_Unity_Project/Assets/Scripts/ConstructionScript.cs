@@ -56,20 +56,23 @@ public class ConstructionScript : MonoBehaviour
 
     private void Build()
     {
-        if (Interactable == true)
+
+        if (PlayerAnim.GetCurrentAnimatorStateInfo(0).IsName("CharacterArmature|Punch") != true)
         {
-            for (int i = 0; i < InvManager.Resources.Count; i++)
+            if (Interactable == true)
             {
-                if(InvManager.Resources[i].ResourceName == NeededResource && InvManager.Resources[i].CurrentResourceValue > 0)
+                for (int i = 0; i < InvManager.Resources.Count; i++)
                 {
-                    PlayerAnim.SetTrigger("Interact");
-                    CurrentResourceAmount++;
-                    InvManager.Resources[i].CurrentResourceValue--;
-                    if(CurrentResourceAmount == NeededResourceAmount)
+                    if (InvManager.Resources[i].ResourceName == NeededResource && InvManager.Resources[i].CurrentResourceValue > 0)
                     {
-                        ConstructObject();
+                        PlayerAnim.Play("CharacterArmature|Punch");
+                        CurrentResourceAmount++;
+                        InvManager.Resources[i].CurrentResourceValue--;
+                        if (CurrentResourceAmount == NeededResourceAmount)
+                        {
+                            ConstructObject();
+                        }
                     }
-                    PlayerAnim.ResetTrigger("Interact");
                 }
             }
         }
