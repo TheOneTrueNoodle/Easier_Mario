@@ -53,8 +53,8 @@ public class ConstructionScript : MonoBehaviour
         {
             Interactable = true;
             Canvas.SetActive(true);
+            col.GetComponentInChildren<InputPrompt>().ShowDisplay();
         }
-        col.GetComponentInChildren<ChangeInputPrompt>().ShowDisplay();
     }
 
     private void OnTriggerExit(Collider col)
@@ -63,8 +63,8 @@ public class ConstructionScript : MonoBehaviour
         {
             Interactable = false;
             Canvas.SetActive(false);
+            col.GetComponentInChildren<InputPrompt>().HideDisplay();
         }
-        col.GetComponentInChildren<ChangeInputPrompt>().HideDisplay();
     }
 
     private void Build()

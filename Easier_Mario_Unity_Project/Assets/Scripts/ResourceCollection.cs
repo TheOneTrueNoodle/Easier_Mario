@@ -47,7 +47,7 @@ public class ResourceCollection : MonoBehaviour
     {
         if(col.tag == "Player")
         {
-            col.GetComponentInChildren<ChangeInputPrompt>().ShowDisplay();
+            col.GetComponentInChildren<InputPrompt>().ShowDisplay();
         }
     }
 
@@ -79,7 +79,7 @@ public class ResourceCollection : MonoBehaviour
         {
             Interactable = false;
         }
-        col.GetComponentInChildren<ChangeInputPrompt>().HideDisplay();
+        col.GetComponentInChildren<InputPrompt>().HideDisplay();
     }
 
     //Trigger Collection

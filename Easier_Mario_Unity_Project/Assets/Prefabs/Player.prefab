@@ -112,13 +112,14 @@ GameObject:
   - component: {fileID: 1376814105}
   - component: {fileID: 1376814104}
   - component: {fileID: 483029386760842750}
+  - component: {fileID: 6607618118532118972}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1376814103
 RectTransform:
   m_ObjectHideFlags: 0
@@ -188,6 +189,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d146ed0bf4b2cb0439b1a464531e16b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &6607618118532118972
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376814102}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a6867982c376898498dee594ed470789, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1730582005
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1730582006}
-  - component: {fileID: 1730582007}
+  - component: {fileID: 1167128284}
   m_Layer: 0
   m_Name: Input Displays
   m_TagString: Untagged
@@ -220,7 +240,7 @@ Transform:
   m_Father: {fileID: 89695780480195667}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1730582007
+--- !u!114 &1167128284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,16 +249,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1730582005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4adb667124a9f964aa9effda83c5a6ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 4788477ee2910ec47bc49d2d22357f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProController_A: {fileID: 21300000, guid: 8161dedd53d77c94c9a3dd3b1d8f5509, type: 3}
-  ProController_B: {fileID: 21300000, guid: c0442476e79ac6246affb95ed515183f, type: 3}
-  PS4Controller_Circle: {fileID: 0}
-  PS4Controller_Cross: {fileID: 0}
-  Keyboard_E: {fileID: 0}
-  Keyboard_Space: {fileID: 0}
-  ButtonPrompt: {fileID: 1376814102}
+  UIAnim: {fileID: 6607618118532118972}
 --- !u!1 &192344306235100673
 GameObject:
   m_ObjectHideFlags: 0
