@@ -42,7 +42,7 @@ public class InputDeviceChangeHandler : MonoBehaviour
     void updateButtonImage(string schemeName)
     {
         // assuming you have only 2 schemes: keyboard and gamepad
-        if (schemeName.Equals("Pro Controller"))
+        if (schemeName.Equals("ProController"))
         {
             buttonImage.sprite = ProControllerImage;
         }
@@ -50,7 +50,7 @@ public class InputDeviceChangeHandler : MonoBehaviour
         {
             buttonImage.sprite = keyboardImage;
         }
-        else if(schemeName.Equals("PS4 Controller"))
+        else if(schemeName.Equals("PS4Controller"))
         {
             buttonImage.sprite = PS4ControllerImage;
         }

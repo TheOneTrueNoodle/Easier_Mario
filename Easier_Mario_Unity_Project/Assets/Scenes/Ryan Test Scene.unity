@@ -6631,6 +6631,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 753642081170212581, guid: e51ef0cdc4745574ea149e4e0a96d0be, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Pro Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 753642081170212581, guid: e51ef0cdc4745574ea149e4e0a96d0be, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 753642081170212585, guid: e51ef0cdc4745574ea149e4e0a96d0be, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6670,9 +6678,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonImage: {fileID: 483029386760842749}
-  ProControllerImage: {fileID: 0}
-  PS4ControllerImage: {fileID: 0}
-  keyboardImage: {fileID: 0}
+  ProControllerImage: {fileID: 21300000, guid: 8161dedd53d77c94c9a3dd3b1d8f5509, type: 3}
+  PS4ControllerImage: {fileID: 21300000, guid: d53fa44f0c829f44c91d0f64f0133581, type: 3}
+  keyboardImage: {fileID: 21300000, guid: c0442476e79ac6246affb95ed515183f, type: 3}
 --- !u!4 &543450652792844719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 89695780480195667, guid: e51ef0cdc4745574ea149e4e0a96d0be, type: 3}

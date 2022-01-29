@@ -155,7 +155,7 @@
                     "path": "<SwitchProControllerHID>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -188,7 +188,7 @@
                     "path": "<SwitchProControllerHID>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -221,7 +221,7 @@
                     "path": "<SwitchProControllerHID>/buttonEast",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -703,7 +703,7 @@
                     "path": "<SwitchProControllerHID>/leftStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -714,7 +714,7 @@
                     "path": "<SwitchProControllerHID>/leftStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -725,7 +725,7 @@
                     "path": "<SwitchProControllerHID>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -736,7 +736,7 @@
                     "path": "<SwitchProControllerHID>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -758,7 +758,7 @@
                     "path": "<SwitchProControllerHID>/rightStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -769,7 +769,7 @@
                     "path": "<SwitchProControllerHID>/rightStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -780,7 +780,7 @@
                     "path": "<SwitchProControllerHID>/rightStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -791,7 +791,7 @@
                     "path": "<SwitchProControllerHID>/rightStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -802,7 +802,7 @@
                     "path": "<Gamepad>/dpad",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Pro Controller",
+                    "groups": "ProController",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1092,8 +1092,8 @@
             ]
         },
         {
-            "name": "Pro Controller",
-            "bindingGroup": "Pro Controller",
+            "name": "ProController",
+            "bindingGroup": "ProController",
             "devices": [
                 {
                     "devicePath": "<SwitchProControllerHID>",
