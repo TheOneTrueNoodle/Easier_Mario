@@ -66,6 +66,8 @@ public class ConstructionScript : MonoBehaviour
                 {
                     if (InvManager.Resources[i].ResourceName == NeededResource && InvManager.Resources[i].CurrentResourceValue > 0)
                     {
+                        
+                        FindObjectOfType<AudioManager>().Play("BuildingBridge");
                         PlayerAnim.Play("CharacterArmature|Punch");
                         CurrentResourceAmount++;
                         InvManager.Resources[i].CurrentResourceValue--;

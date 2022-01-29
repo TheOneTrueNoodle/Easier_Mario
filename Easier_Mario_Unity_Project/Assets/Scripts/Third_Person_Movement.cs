@@ -76,10 +76,13 @@ public class Third_Person_Movement : MonoBehaviour
 
         if (MoveInput.x == 0 && MoveInput.y == 0)
         {
+            
+            FindObjectOfType<AudioManager>().Pause("WalkGrass");
             Anim.SetBool("isRunning", false);
         }
         else
         {
+            FindObjectOfType<AudioManager>().Play("WalkGrass");
             Anim.SetBool("isRunning", true);
         }
 
@@ -102,6 +105,7 @@ public class Third_Person_Movement : MonoBehaviour
         if (isGrounded == true)
         {
             Anim.SetBool("IsJumping", true);
+            FindObjectOfType<AudioManager>().Play("Jump");
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
     }
