@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4182892782393257785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4182892782393257783}
+  - component: {fileID: 4182892782393257782}
+  - component: {fileID: 4182892782393257780}
+  m_Layer: 0
+  m_Name: AudioManager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4182892782393257783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4182892782393257785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 48.62083, y: -66.92015, z: 93.57146}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4182892782393257782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4182892782393257785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6df0eb0b3788c45a7d426db573e507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Splash
+    loop: 0
+    clip: {fileID: 8300000, guid: 58d752a44836bf74d90b9b1d879f1931, type: 3}
+    volume: 0.08
+    pitch: 1
+    source: {fileID: 0}
+  - name: Village
+    loop: 1
+    clip: {fileID: 8300000, guid: ff74e994129607841928790dc2f7064b, type: 3}
+    volume: 0.02
+    pitch: 1
+    source: {fileID: 0}
+  - name: Sky
+    loop: 1
+    clip: {fileID: 8300000, guid: b50b57078bc5e2343b7530d5f331dc78, type: 3}
+    volume: 0.06
+    pitch: 1
+    source: {fileID: 0}
+  - name: WalkGrass
+    loop: 0
+    clip: {fileID: 8300000, guid: db74545805c67b84cb922d4d1ee75c51, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Jump
+    loop: 0
+    clip: {fileID: 8300000, guid: a660344dee9356542861621cba690fbd, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - name: HittingTree
+    loop: 0
+    clip: {fileID: 8300000, guid: bc44fa7b6a0266246b426fc7d93f5238, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BuildingBridge
+    loop: 0
+    clip: {fileID: 8300000, guid: 78e2c9fa67e77f04a97d424a34ee7cb2, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+--- !u!114 &4182892782393257780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4182892782393257785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c349838ef33f59941b9a5ec35112b92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

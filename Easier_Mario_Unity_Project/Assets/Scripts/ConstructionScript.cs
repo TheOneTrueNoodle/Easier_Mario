@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ConstructionScript : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class ConstructionScript : MonoBehaviour
     private PlayerControls pInput;
 
     private Animator PlayerAnim;
+
+    public TMP_Text RequiredResources;
+    public GameObject Canvas;
 
     private void Awake()
     {
@@ -37,11 +41,18 @@ public class ConstructionScript : MonoBehaviour
         PlayerAnim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         CurrentResourceAmount = 0;
     }
+
+    private void Update()
+    {
+        RequiredResources.text = CurrentResourceAmount + "/" + NeededResourceAmount;
+    }
+
     private void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Player")
         {
             Interactable = true;
+            Canvas.SetActive(true);
         }
         col.GetComponentInChildren<ChangeInputPrompt>().ShowDisplay();
     }
@@ -51,6 +62,7 @@ public class ConstructionScript : MonoBehaviour
         if (col.tag == "Player")
         {
             Interactable = false;
+            Canvas.SetActive(false);
         }
         col.GetComponentInChildren<ChangeInputPrompt>().HideDisplay();
     }
