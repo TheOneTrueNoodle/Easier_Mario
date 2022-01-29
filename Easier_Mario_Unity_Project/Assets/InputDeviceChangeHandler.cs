@@ -16,7 +16,6 @@ public class InputDeviceChangeHandler : MonoBehaviour
 
     void Awake()
     {
-        buttonImage = GetComponent<Image>();
         PlayerInput input = FindObjectOfType<PlayerInput>();
         updateButtonImage(input.currentControlScheme);
     }
