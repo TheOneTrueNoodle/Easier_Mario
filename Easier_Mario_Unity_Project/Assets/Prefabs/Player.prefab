@@ -571,6 +571,7 @@ MonoBehaviour:
     m_Bits: 64
   velocity: {x: 0, y: 0, z: 0}
   isGrounded: 0
+  Steps: {fileID: 7356808699768931910}
   turnSmoothTime: 0.1
 --- !u!136 &825308588
 CapsuleCollider:
