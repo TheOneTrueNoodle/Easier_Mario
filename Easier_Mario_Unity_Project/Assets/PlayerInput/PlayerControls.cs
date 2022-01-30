@@ -260,6 +260,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""AccessMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""caf39aa6-710f-4a47-b9ae-b393311bf6c6"",
+                    ""path"": ""<SwitchProControllerHID>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""ProController"",
+                    ""action"": ""AccessMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3506e7f4-245a-449a-a30d-ca12efed7ca9"",
+                    ""path"": ""<DualShockGamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PS4 Dualshock"",
+                    ""action"": ""AccessMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
