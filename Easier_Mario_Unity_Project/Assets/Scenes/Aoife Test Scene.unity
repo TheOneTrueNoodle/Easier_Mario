@@ -14862,6 +14862,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1056286618}
     m_Modifications:
+    - target: {fileID: 5748605829413272183, guid: bc5563943dbe7b04e87f9664edccd35b, type: 3}
+      propertyPath: CanRegrow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7897951913451838012, guid: bc5563943dbe7b04e87f9664edccd35b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -47269,7 +47273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1274721996
 Transform:
   m_ObjectHideFlags: 0
