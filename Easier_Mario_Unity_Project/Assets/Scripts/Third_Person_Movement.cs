@@ -36,6 +36,7 @@ public class Third_Person_Movement : MonoBehaviour
     {
         pInput = new PlayerControls();
         pInput.GameplayControls.Jump.performed += _ => Jump();
+        pInput.GameplayControls.AccessMenu.performed += a => GameObject.Find("UI").GetComponent<HandlePause>().Pause();
     }
 
     private void OnEnable()
