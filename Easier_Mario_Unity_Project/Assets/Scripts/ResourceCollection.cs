@@ -20,6 +20,8 @@ public class ResourceCollection : MonoBehaviour
     public float MinGrowTime;
     private float GrowTime;
 
+    public bool CanRegrow;
+
     private void Awake()
     {
         pInput = new PlayerControls();
@@ -101,15 +103,19 @@ public class ResourceCollection : MonoBehaviour
                                 PlayerAnim.Play("CharacterArmature|Punch");
                                 InvManager.Resources[i].CurrentResourceValue++;
                                 CurrentResourceCount--;
-                                if(CurrentResourceCount > 0)
+                                if (CurrentResourceCount > 0)
                                 {
                                     ThisAnim.Play("TreeInteractAnimation");
                                 }
-                                else if(CurrentResourceCount == 0)
+                                else if (CurrentResourceCount == 0 && CanRegrow == true)
                                 {
                                     ThisAnim.Play("TreeUsedUpAnimation");
                                     StartGrowing = true;
                                     GrowTime = Random.Range(MinGrowTime, MaxGrowTime);
+                                }
+                                else if (CurrentResourceCount == 0 && CanRegrow)
+                                {
+                                    ThisAnim.Play("TreeUsedUpAnimation");
                                 }
                             }
                         }
