@@ -28,6 +28,8 @@ public class Third_Person_Movement : MonoBehaviour
     [HideInInspector] public Vector3 velocity;
     [HideInInspector] public bool isGrounded;
 
+    public AudioSource Steps;
+
     //Variables for turning character body
     public float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
@@ -95,6 +97,11 @@ public class Third_Person_Movement : MonoBehaviour
 
             moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * (walkspeed * Time.deltaTime));
+
+            if (!Steps.isPlaying && isGrounded == true)
+            {
+                Steps.Play();
+            }
         }
 
         velocity.y += gravity * Time.deltaTime;
