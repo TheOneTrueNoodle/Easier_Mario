@@ -168,7 +168,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<SwitchProControllerHID>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -201,7 +201,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<SwitchProControllerHID>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -234,7 +234,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<SwitchProControllerHID>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -320,6 +320,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""type"": ""PassThrough"",
                     ""id"": ""f6763f39-6efe-427d-ac95-be90395d441f"",
                     ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Point"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""26c29cb2-027c-4f54-a6ef-6706bcc37d52"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -716,7 +724,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<SwitchProControllerHID>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -727,7 +735,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<SwitchProControllerHID>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -738,7 +746,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<SwitchProControllerHID>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -749,7 +757,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<SwitchProControllerHID>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -771,7 +779,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<SwitchProControllerHID>/rightStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -782,7 +790,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<SwitchProControllerHID>/rightStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -793,7 +801,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<SwitchProControllerHID>/rightStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -804,7 +812,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<SwitchProControllerHID>/rightStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -815,7 +823,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/dpad"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Pro Controller"",
+                    ""groups"": ""ProController"",
                     ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1083,6 +1091,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""RightClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4cc0db37-4cf9-4809-a46c-f53e9fc8609c"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""M+K"",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -1105,8 +1124,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             ]
         },
         {
-            ""name"": ""Pro Controller"",
-            ""bindingGroup"": ""Pro Controller"",
+            ""name"": ""ProController"",
+            ""bindingGroup"": ""ProController"",
             ""devices"": [
                 {
                     ""devicePath"": ""<SwitchProControllerHID>"",
@@ -1143,6 +1162,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
         m_UI_MiddleClick = m_UI.FindAction("MiddleClick", throwIfNotFound: true);
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
+        m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1256,6 +1276,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_UI_ScrollWheel;
     private readonly InputAction m_UI_MiddleClick;
     private readonly InputAction m_UI_RightClick;
+    private readonly InputAction m_UI_Point;
     public struct UIActions
     {
         private @PlayerControls m_Wrapper;
@@ -1267,6 +1288,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @ScrollWheel => m_Wrapper.m_UI_ScrollWheel;
         public InputAction @MiddleClick => m_Wrapper.m_UI_MiddleClick;
         public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
+        public InputAction @Point => m_Wrapper.m_UI_Point;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1297,6 +1319,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @RightClick.started -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
                 @RightClick.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
                 @RightClick.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
+                @Point.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Point.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Point.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
@@ -1322,6 +1347,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @RightClick.started += instance.OnRightClick;
                 @RightClick.performed += instance.OnRightClick;
                 @RightClick.canceled += instance.OnRightClick;
+                @Point.started += instance.OnPoint;
+                @Point.performed += instance.OnPoint;
+                @Point.canceled += instance.OnPoint;
             }
         }
     }
@@ -1340,7 +1368,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     {
         get
         {
-            if (m_ProControllerSchemeIndex == -1) m_ProControllerSchemeIndex = asset.FindControlSchemeIndex("Pro Controller");
+            if (m_ProControllerSchemeIndex == -1) m_ProControllerSchemeIndex = asset.FindControlSchemeIndex("ProController");
             return asset.controlSchemes[m_ProControllerSchemeIndex];
         }
     }
@@ -1369,5 +1397,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnScrollWheel(InputAction.CallbackContext context);
         void OnMiddleClick(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
+        void OnPoint(InputAction.CallbackContext context);
     }
 }

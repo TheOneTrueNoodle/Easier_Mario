@@ -47,3 +47,4 @@ MonoBehaviour:
   - ResourceName: Wood
     CurrentResourceValue: 0
     MaxResourceValue: 10
+  Resource: {fileID: 0}
