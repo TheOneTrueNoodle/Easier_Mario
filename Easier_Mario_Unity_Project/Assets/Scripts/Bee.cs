@@ -19,8 +19,7 @@ public class Bee : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-
+        HaveBee = false;
     }
 
     // Update is called once per frame
@@ -41,7 +40,7 @@ public class Bee : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.tag == "Child")
+        if (other.tag == "Child" & HaveBee == true)
         {
             heart.SetActive(true);
             thankYouText.SetActive(true);
