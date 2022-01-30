@@ -98,7 +98,7 @@ public class Third_Person_Movement : MonoBehaviour
             moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * (walkspeed * Time.deltaTime));
 
-            if (!Steps.isPlaying)
+            if (!Steps.isPlaying && isGrounded == true)
             {
                 Steps.Play();
             }

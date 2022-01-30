@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3748501988771734273}
   - component: {fileID: 3748501988771734272}
   - component: {fileID: 3748501988771734275}
+  - component: {fileID: 165885613}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -62,7 +63,7 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_ActionsAsset: {fileID: -944628639613478452, guid: a1df7a063c5a6be45bbf84b92daee1b9, type: 3}
-  m_PointAction: {fileID: 0}
+  m_PointAction: {fileID: 1054132383583890850, guid: a1df7a063c5a6be45bbf84b92daee1b9, type: 3}
   m_MoveAction: {fileID: -2546304913965614017, guid: a1df7a063c5a6be45bbf84b92daee1b9, type: 3}
   m_SubmitAction: {fileID: -48827366279163205, guid: a1df7a063c5a6be45bbf84b92daee1b9, type: 3}
   m_CancelAction: {fileID: -6379180371914654440, guid: a1df7a063c5a6be45bbf84b92daee1b9, type: 3}
@@ -74,3 +75,15 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 0}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+--- !u!114 &165885613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748501988771734274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5799ea1669e74a34182ddf49cf501ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
