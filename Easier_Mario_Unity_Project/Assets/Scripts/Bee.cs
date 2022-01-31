@@ -53,7 +53,7 @@ public class Bee : MonoBehaviour
         IEnumerator coroutineA()
         {
             yield return new WaitForSeconds(3.0f);
-            SceneManager.LoadScene("Jaga Test Scene");
+            SceneManager.LoadScene("Aoife Test Scene 2");
         }
         IEnumerator coroutineB()
         {

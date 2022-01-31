@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Aoife Test Scene.unity
     guid: fb09e5b567736c8498796486c1d957a4
+  - enabled: 1
+    path: Assets/Scenes/Aoife Test Scene 2.unity
+    guid: 50bd92331c589a2478fb8431f392d928
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ad2084d129fff2647a57261a115f83c6, type: 2}
