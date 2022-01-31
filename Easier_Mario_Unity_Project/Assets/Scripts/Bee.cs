@@ -47,13 +47,29 @@ public class Bee : MonoBehaviour
             BeeToy.SetActive(true);
             StartCoroutine(coroutineB());
 
+        }
+
+        if (other.tag == "Child2" & HaveBee == true)
+        {
+            heart.SetActive(true);
+            thankYouText.SetActive(true);
+            BeeToy.SetActive(true);
+            StartCoroutine(coroutineC());
 
         }
 
         IEnumerator coroutineA()
         {
             yield return new WaitForSeconds(3.0f);
+            HaveBee = false;
             SceneManager.LoadScene("Aoife Test Scene 2");
+        }
+
+        IEnumerator coroutineC()
+        {
+            yield return new WaitForSeconds(3.0f);
+            HaveBee = false;
+            SceneManager.LoadScene("Jaga Test Scene");
         }
         IEnumerator coroutineB()
         {
