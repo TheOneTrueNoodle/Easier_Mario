@@ -7,6 +7,7 @@ public class HandlePause : MonoBehaviour
     public bool paused; //do we be paused rn
     public GameObject pauseScreen; //the pause screen canvas object
     public static GameObject instance;
+    public bool unstarted = true;
 
     private GameObject Player;
 
@@ -36,6 +37,9 @@ public class HandlePause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
+
+
         if (paused)
         {
             pauseScreen.SetActive(true);
@@ -46,8 +50,13 @@ public class HandlePause : MonoBehaviour
         {
             Time.timeScale = 1;
             pauseScreen.SetActive(false);
-            Player.GetComponent<Third_Person_Movement>().enabled = true;
+            if (!unstarted)
+            {
+                Player.GetComponent<Third_Person_Movement>().enabled = true;
+            }
         }
+
+
     }
 
     public void Pause()  //for the Resume button
@@ -60,4 +69,8 @@ public class HandlePause : MonoBehaviour
         paused = false;
     }
 
+    public void Startit()
+    {
+        unstarted = false;
+    }
 }
