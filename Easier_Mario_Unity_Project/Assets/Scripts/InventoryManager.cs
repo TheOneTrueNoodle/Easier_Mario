@@ -11,7 +11,8 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        for(int i = 0; i < Resources.Count; i++)
+        Resource = GameObject.FindGameObjectWithTag("Wood").GetComponent<TMP_Text>();
+        for (int i = 0; i < Resources.Count; i++)
         {
             Resource.text = Resources[i].CurrentResourceValue + "/" + Resources[i].MaxResourceValue;
         }

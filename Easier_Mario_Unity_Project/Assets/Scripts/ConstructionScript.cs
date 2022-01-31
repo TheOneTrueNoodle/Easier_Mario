@@ -97,6 +97,7 @@ public class ConstructionScript : MonoBehaviour
     {
         GameObject NewObj = Instantiate(BuiltObj, transform.position, transform.rotation);
         NewObj.transform.localScale = gameObject.transform.localScale;
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InputPrompt>().HideDisplay();
         Destroy(gameObject);
     }
 }

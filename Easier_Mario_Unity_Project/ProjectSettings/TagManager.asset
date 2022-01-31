@@ -9,6 +9,7 @@ TagManager:
   - Bee
   - Child
   - Child2
+  - Wood
   layers:
   - Default
   - TransparentFX
