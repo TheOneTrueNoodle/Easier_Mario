@@ -69,9 +69,9 @@ public class Third_Person_Movement : MonoBehaviour
             Anim.SetBool("isGrounded", true);
         }
 
-        if (isGrounded && velocity.y < 0)
+        if (velocity.y < -2 * jumpHeight)
         {
-            velocity.y = -2f;
+            velocity.y = -2 * jumpHeight;
         }
 
         MoveInput = pInput.GameplayControls.Move.ReadValue<Vector2>();
